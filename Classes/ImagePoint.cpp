@@ -100,7 +100,7 @@ void ImagePoint::_removeShadow() {
 
 	if (shadowImage) {
 		float duration = 0.05f;
-		CCActionInterval* moveShadow = CCMoveTo::create(duration, ccp(kShiftShadow, -kShiftShadow));
+		CCActionInterval* moveShadow = CCMoveTo::create(duration, ccp(0, 0));
 		CCAction * seq = CCSequence::create(moveShadow, CCRemoveSelf::create(), NULL);
 		shadowImage->runAction(seq);
 	}
